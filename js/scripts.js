@@ -25,9 +25,9 @@
 
 //THIS IS AN ARRAY
 var boardArray = [
-  ['','',''],
-  ['','',''],
-  ['','','']
+  ['x','x','x'],
+  ['1','2','3'],
+  ['j','k','f']
 ];
 
 //THIS IS AN OBJECT
@@ -35,4 +35,22 @@ var gameBoard = {
   board: boardArray
 };
 
+
+//checking rows
+for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < boardArray.length; j++) {
+
+        if (boardArray[i][0] == 'x' && boardArray[i][1] == 'x' && boardArray[i][2] == 'x') {
+            winner = "Player X";
+        } else {
+            winner = null;
+        }
+
+        if (boardArray[i][0] == 'o' && boardArray[i][1] == 'o' && boardArray[i][2] == 'o') {
+            winner = "Player O";
+        } else {
+            winner = null;
+        }
+    }
+}
 /*******************  FRONT END (USER INTERFACE) *********************/
