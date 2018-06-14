@@ -36,20 +36,20 @@ var gameBoard = {
 };
 
 
-//checking rows
-for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < boardArray.length; j++) {
+var winner;//to be used for the loop results
 
-        if (boardArray[i][0] == 'x' && boardArray[i][1] == 'x' && boardArray[i][2] == 'x') {
+//checking rows
+for (var col = 0; col < 3; col++) {
+    for (var row = 0; row < 3; row++) {
+
+        if (boardArray[row][0] === 'x' && boardArray[row][1] === 'x' && boardArray[row][2] === 'x') {
             winner = "Player X";
         } else {
-            winner = null;
+            winner = "fjdksalfj";
         }
 
-        if (boardArray[i][0] == 'o' && boardArray[i][1] == 'o' && boardArray[i][2] == 'o') {
+        if (boardArray[row][col] === 'o' && boardArray[row][col] === 'o' && boardArray[row][col] === 'o') {
             winner = "Player O";
-        } else {
-            winner = null;
         }
     }
 }
